@@ -1,0 +1,52 @@
+<div class="content-wrapper" style="min-height: 1036.3px;">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @client.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @client.email %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @client.address %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @client.phone %>
+  </p>
+
+  <p>
+    <strong>Detail:</strong>
+    <%= @client.detail %>
+  </p>
+
+  <p>
+    <strong>State:</strong>
+    <%= @client.state %>
+  </p>
+
+  <p>
+    <strong>Reserve:</strong>
+    <%= @client.reserve %>
+  </p>
+
+  <p>
+    <strong>Birthday:</strong>
+    <%= @client.birthday %>
+  </p>
+
+  <p>
+    <strong>First contact:</strong>
+    <%= @client.first_contact %>
+  </p>
+
+  <%= link_to 'Edit', edit_client_path(@client) %> |
+  <%= link_to 'Back', clients_path %> |
+  <%= link_to 'Destroy', client_path(@client), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

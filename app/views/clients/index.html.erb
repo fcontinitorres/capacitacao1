@@ -1,0 +1,69 @@
+<!--     CRM Division    -->
+<%
+  n_cols = 5
+  stage_names = ['1º Estágio','2º Estágio','3º Estágio','4º Estágio','5º Estágio','Todos Clientes']
+%>
+
+<div class="content-wrapper" style="min-height: 1036.3px;">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>CRM</h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box box-primary">
+          <p id="notice"><%= notice %></p>
+        </div>
+          
+        <div class="col-sm-12 col-md-12">
+          <% for i in 0..n_cols - 1 %>
+            <!-- Count Stages -->
+            <% clientes_no_estagio = 0
+            @clients.each do |client|
+              if client.state == i
+                clientes_no_estagio += 1
+              end
+            end
+            %>
+
+            <div class="col-sm-12 col-md-2">
+              <!--Print Stage Name-->
+              <h2><%= stage_names[i] =%></h2>
+              <p>(<%= clientes_no_estagio =%> Clientes)</p>
+              <hr>
+              
+              <!-- Print Clients on each stage -->
+              <% @clients.each do |client| %>
+                <% if client.state == i %>
+                  <div class="box box-solid">
+                    <div class="box-body">
+                      <div class="clientColor">
+                        <% if (Date.today - client.first_contact).to_i  > 0 %>
+                          <div style="background-color: white">
+                            <!--Style cliente on CRM here-->
+                            <%= link_to client.name, client %><br>
+                            <%= link_to 'go ahead', change_stage_client_path(client), :class => ""%>
+                          </div>
+                        <% else %>
+                            <div style="background-color: white">
+                            <!--Style cliente on CRM here-->
+                            <%= link_to client.name, client %><br>
+                            <%= link_to 'go ahead', change_stage_client_path(client), :class => ""%>
+                          </div>
+                        <%end%>
+                      </div>
+                    </div>
+                  </div>                  
+                <% end %>
+              <% end %>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
