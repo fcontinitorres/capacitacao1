@@ -1,2 +1,5 @@
 # File para ignorar arquivos
 ignore.txt
+
+# Esse arquivo n sera ignorando pelo github ainda, pq ja esta no repositorio
+git_commands.txt
