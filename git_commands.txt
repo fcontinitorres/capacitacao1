@@ -1,0 +1,12 @@
+git commands:
+
+git rm --cached file.name
+git restore file.name
+
+Os arquivos do git que já foram comitados não podem ser adicionados ao .gitignore
+Para que eles não sejam mais sincronizados é necessário usar o command rm --cached
+O arquivo devo ficar igual a sua ultima atualização na maquina local e no github deve ficar desatualizado
+
+Vamos testar nesse arquivo.
+
+Essa atualziação deve ficar aqui. Essa linha não deve estar no github repository
