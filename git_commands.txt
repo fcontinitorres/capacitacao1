@@ -8,7 +8,3 @@ Para que eles não sejam mais sincronizados é necessário usar o command rm --c
 O arquivo devo ficar igual a sua ultima atualização na maquina local e no github deve ficar desatualizado
 
 Vamos testar nesse arquivo.
-
-Essa atualziação deve ficar aqui. Essa linha não deve estar no github repository.
-
-A linha de cima foi oficializada, agora vamos ver essa se eu consigo.
