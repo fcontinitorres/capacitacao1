@@ -9,4 +9,6 @@ O arquivo devo ficar igual a sua ultima atualização na maquina local e no gith
 
 Vamos testar nesse arquivo.
 
-Essa atualziação deve ficar aqui. Essa linha não deve estar no github repository
+Essa atualziação deve ficar aqui. Essa linha não deve estar no github repository.
+
+A linha de cima foi oficializada, agora vamos ver essa se eu consigo.
